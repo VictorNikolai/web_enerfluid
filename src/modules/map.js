@@ -65,7 +65,7 @@ async function build(box, site) {
 
   const pin = L.divIcon({
     className: 'map-pin',
-    html: '<span class="map-pin-dot"><img src="/favicon.png" alt="" width="28" height="28" /></span><span class="map-pin-pulse"></span>',
+    html: `<span class="map-pin-dot"><img src="${import.meta.env.BASE_URL}favicon.png" alt="" width="28" height="28" /></span><span class="map-pin-pulse"></span>`,
     iconSize: [56, 56],
     iconAnchor: [28, 52],
     popupAnchor: [0, -50],

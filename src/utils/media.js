@@ -1,6 +1,14 @@
 import sizes from '../data/image-sizes.json';
 import { escapeHtml } from './format.js';
 
+export const withBase = (path) => {
+  const base = import.meta.env.BASE_URL || '/';
+  if (!path) return path;
+  if (path.startsWith(base)) return path;
+  if (path.startsWith('/')) return `${base}${path.slice(1)}`;
+  return `${base}${path}`;
+};
+
 /*
  * Fotos generadas por `npm run images` en tres anchos y dos formatos:
  *   /img/carpeta/nombre-{480,960,1800}.{avif,webp}
@@ -8,11 +16,12 @@ import { escapeHtml } from './format.js';
  */
 export const WIDTHS = [480, 960, 1800];
 
-export const src = (base, w = 960, ext = 'webp') => `${base}-${w}.${ext}`;
+export const src = (base, w = 960, ext = 'webp') => `${withBase(base)}-${w}.${ext}`;
 
 export const srcset = (base, ext = 'webp') => {
   const max = sizes[base]?.[0] ?? 1800;
-  return WIDTHS.map((w) => `${base}-${w}.${ext} ${Math.min(w, max)}w`).join(', ');
+  const resolved = withBase(base);
+  return WIDTHS.map((w) => `${resolved}-${w}.${ext} ${Math.min(w, max)}w`).join(', ');
 };
 
 /** Ancho y alto reales de la versión grande (para el visor con zoom). */

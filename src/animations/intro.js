@@ -17,7 +17,7 @@ export function playIntro(onComplete = () => {}) {
   const shutter = document.createElement('div');
   shutter.className = 'shutter';
   shutter.setAttribute('aria-hidden', 'true');
-  shutter.innerHTML = '<img class="shutter-logo" src="/img/logo-mercado-san-martin-blanco.png" alt="" />';
+  shutter.innerHTML = `<img class="shutter-logo" src="${import.meta.env.BASE_URL}img/logo-mercado-san-martin-blanco.png" alt="" />`;
   document.body.append(shutter);
   const logo = shutter.querySelector('img');
 

@@ -6,6 +6,14 @@
  */
 import site from './data/site.json';
 
+const withBase = (path) => {
+  const base = import.meta.env.BASE_URL || '/';
+  if (!path) return path;
+  if (path.startsWith(base)) return path;
+  if (path.startsWith('/')) return `${base}${path.slice(1)}`;
+  return `${base}${path}`;
+};
+
 export const config = {
   company: site.name,
   site,
@@ -26,9 +34,9 @@ export const config = {
   socials: site.socials,
 
   // Videos (carpeta public/video/). El de portada va sin audio y en bucle.
-  heroVideo: '/video/mercado-loop.mp4',
-  fullVideo: '/video/mercado-san-martin.mp4',
-  videoPoster: '/img/mercado/video-poster-1800.webp',
+  heroVideo: withBase('/video/mercado-loop.mp4'),
+  fullVideo: withBase('/video/mercado-san-martin.mp4'),
+  videoPoster: withBase('/img/mercado/video-poster-1800.webp'),
 
   // URL de la API (FastAPI). En producción se define en el archivo .env (VITE_API_URL).
 };

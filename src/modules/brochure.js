@@ -12,7 +12,9 @@ import { gsap, ScrollTrigger, prefersReducedMotion } from './motion.js';
  */
 export function initBrochure() {
   const { brochure } = data;
-  const fileUrl = brochure.file;
+  const fileUrl = brochure.file.startsWith('/')
+    ? `${import.meta.env.BASE_URL}${brochure.file.slice(1)}`
+    : brochure.file;
 
   // Todos los enlaces de descarga de la web apuntan al mismo PDF.
   document.querySelectorAll('[data-brochure-download]').forEach((a) => {

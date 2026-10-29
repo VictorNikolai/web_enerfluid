@@ -8,8 +8,10 @@ const site = JSON.parse(readFileSync(new URL('./src/data/site.json', import.meta
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
   const isPreview = env.VITE_PREVIEW === '1' || process.env.VITE_PREVIEW === '1';
+  const base = env.VITE_BASE || (mode === 'production' ? '/web_enerfluid/' : '/');
 
   return {
+    base,
     plugins: [
       seoPlugin(env),
       VitePWA({
@@ -23,19 +25,19 @@ export default defineConfig(({ mode }) => {
           short_name: site.shortName,
           description: site.description,
           lang: 'es-PE',
-          start_url: '/',
-          scope: '/',
+          start_url: base,
+          scope: base,
           display: 'standalone',
           theme_color: site.colors.brand,
           background_color: site.colors.dark,
           icons: [
-            { src: '/pwa-192.png', sizes: '192x192', type: 'image/png' },
-            { src: '/pwa-512.png', sizes: '512x512', type: 'image/png' },
-            { src: '/pwa-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+            { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
+            { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
+            { src: 'pwa-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
           ],
           shortcuts: [
-            { name: 'Separa tu puesto', url: '/#separa', icons: [{ src: '/pwa-192.png', sizes: '192x192' }] },
-            { name: 'Contacto', url: '/#contacto', icons: [{ src: '/pwa-192.png', sizes: '192x192' }] },
+            { name: 'Separa tu puesto', url: `${base}#separa`, icons: [{ src: 'pwa-192.png', sizes: '192x192' }] },
+            { name: 'Contacto', url: `${base}#contacto`, icons: [{ src: 'pwa-192.png', sizes: '192x192' }] },
           ],
         },
         workbox: {
