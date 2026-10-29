@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--header-h);
+}
+
+html.is-locked {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* <picture> no crea caja: el <img> de adentro se comporta como si estuviera solo. */
+picture {
+  display: contents;
+}
+
+img,
+svg,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--lemon);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Las animaciones que entran de lado nunca ensanchan la página en el celular. */
+main,
+footer {
+  overflow-x: clip;
+}
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  transform: translateY(-160%);
+  transition: transform 0.2s;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.section-title {
+  font-size: var(--step-4);
+}
+
+.section-lead {
+  max-width: 56ch;
+  margin-top: 1rem;
+  color: var(--ink-soft);
+  font-size: var(--step-1);
+  line-height: 1.55;
+}
+
+/* Texturas de fondo reutilizables */
+.tex-ceramica {
+  background:
+    var(--tex-ceramica),
+    linear-gradient(180deg, var(--tile), #fbfbfc 55%, var(--tile));
+}
+
+.tex-calamina {
+  background: var(--tex-calamina), linear-gradient(180deg, var(--red), var(--red-deep));
+  color: var(--white);
+}
+
+.tex-cortina {
+  background:
+    var(--tex-cortina),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(227, 27, 35, 0.35), transparent 70%),
+    var(--wine);
+  color: var(--white);
+}
+
+.tex-calamina .section-lead,
+.tex-cortina .section-lead {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.lemon-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex: none;
+}
+
+/* Títulos con revelado por líneas */
+.reveal-line {
+  padding-bottom: 0.06em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

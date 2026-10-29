@@ -1,0 +1,52 @@
+/*
+ * Tokens de diseño del Mercado San Martín.
+ * Concepto: la web se construye con los materiales del propio mercado:
+ * calamina roja, cortinas enrollables, marcos azules de los puestos,
+ * piso de cerámica blanca y el limón del logo como acento.
+ */
+:root {
+  /* Colores de marca (tomados del logo y del edificio) */
+  --red: #e31b23;         /* rojo del logo */
+  --red-deep: #b3141b;    /* rojo sombra (degradado del logo) */
+  --wine: #3d0a0e;        /* fondos oscuros: rojo muy profundo */
+  --wine-2: #5a1017;
+  --lemon: #ffc61a;       /* limón del logo */
+  --lemon-soft: #fff4c7;
+  --sky: #1e9bd7;         /* marcos azules de los puestos */
+  --ink: #221a1b;         /* texto principal, negro cálido */
+  --ink-soft: #5e5759;
+  --tile: #f2f4f6;        /* cerámica del piso */
+  --line: #e1e4e8;
+  --white: #ffffff;
+  --whatsapp: #1fa855;
+
+  /* Tipografía: Jost es geométrica como las letras del logo */
+  --font-display: 'Jost Variable', 'Futura', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument Sans Variable', 'Segoe UI', system-ui, sans-serif;
+
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5rem;
+  --step-3: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  --step-4: clamp(2.25rem, 1.4rem + 3.4vw, 3.75rem);
+  --step-5: clamp(3rem, 1.2rem + 7vw, 7.25rem);
+
+  /* Espacios y formas */
+  --gutter: max(16px, 4vw);
+  --section: clamp(4.5rem, 9vw, 8.5rem);
+  --container: 1240px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-photo: 0 30px 60px -30px rgba(61, 10, 14, 0.5);
+  --shadow-float: 0 12px 30px -10px rgba(34, 26, 27, 0.35);
+
+  --header-h: 80px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Texturas del mercado (mosaicos PNG definidos en textures.css) */
+  --tex-calamina: var(--tile-calamina) 0 0 / var(--tile-calamina-size);
+  --tex-cortina: var(--tile-cortina) 0 0 / var(--tile-cortina-size);
+  --tex-ceramica: var(--tile-ceramica) 0 0 / var(--tile-ceramica-size);
+}

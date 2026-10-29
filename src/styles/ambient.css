@@ -1,0 +1,302 @@
+/* =========================================================
+   Fondos animados (ver animations/ambient.js)
+   ========================================================= */
+
+/* ---------- Aurora detrás de las cortinas ---------- */
+.has-ambient {
+  position: relative;
+  isolation: isolate;
+}
+
+.ambient-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Capa propia: animar el canvas no obliga a repintar el resto de la sección. */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Las láminas de la cortina van ENCIMA de la luz: parece luz que se cuela. */
+[data-ambient='aurora']::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--ambient-tex, var(--tex-cortina));
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.events[data-ambient='aurora'] {
+  --ambient-tex: var(--tile-listones) 0 0 / var(--tile-listones-size);
+  background: linear-gradient(180deg, var(--wine-2), var(--wine));
+}
+
+.tour.tex-cortina,
+.site-footer[data-ambient='aurora'] {
+  background: var(--wine);
+}
+
+/* ---------- Limones flotantes ---------- */
+.ambient-lemons {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-lemon {
+  position: absolute;
+  left: var(--left);
+  bottom: calc(var(--size) * -1.2);
+  width: var(--size);
+  height: var(--size);
+  opacity: 0.6;
+  animation: lemon-rise var(--dur) linear var(--delay) infinite;
+}
+
+@keyframes lemon-rise {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-720px) rotate(calc(var(--spin) * 300deg));
+  }
+}
+
+/* ---------- Brillo y luz sobre la cerámica ---------- */
+.has-tile-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Reflejo que recorre el piso pulido. */
+.has-tile-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.9) 50%, transparent 62%) 0 0 / 260% 100% no-repeat;
+  opacity: 0.55;
+  animation: floor-sheen 11s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floor-sheen {
+  0% {
+    background-position: 130% 0;
+  }
+  60%,
+  100% {
+    background-position: -30% 0;
+  }
+}
+
+/* Las juntas de la cerámica se encienden en rojo alrededor del cursor. */
+.has-tile-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    var(--tile-ceramica-roja) 0 0 / var(--tile-ceramica-roja-size),
+    radial-gradient(circle 300px at var(--mx, -999px) var(--my, -999px), rgba(255, 198, 26, 0.28), transparent 70%);
+  -webkit-mask-image: radial-gradient(circle 280px at var(--mx, -999px) var(--my, -999px), #000 0%, transparent 75%);
+  mask-image: radial-gradient(circle 280px at var(--mx, -999px) var(--my, -999px), #000 0%, transparent 75%);
+  opacity: 0;
+  transition: opacity 0.6s;
+  pointer-events: none;
+}
+
+.has-tile-glow.is-lit::after {
+  opacity: 1;
+}
+
+/* ---------- Barrido de luz sobre la calamina ---------- */
+.tex-calamina,
+.marquee {
+  position: relative;
+  isolation: isolate;
+}
+
+.tex-calamina::before,
+.marquee::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(100deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 42%,
+      rgba(255, 255, 255, 0.28) 50%,
+      rgba(255, 255, 255, 0.1) 58%,
+      transparent 70%) 0 0 / 320% 100% no-repeat;
+  animation: metal-sweep 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.marquee::before {
+  animation-duration: 6s;
+}
+
+@keyframes metal-sweep {
+  0% {
+    background-position: 125% 0;
+  }
+  55%,
+  100% {
+    background-position: -25% 0;
+  }
+}
+
+/* =========================================================
+   Mejoras de interacción (ver animations/polish.js)
+   ========================================================= */
+
+/* Volver arriba: anillo de progreso + limón que gira con el scroll. */
+.to-top {
+  position: fixed;
+  left: max(clamp(1rem, 3vw, 1.75rem), env(safe-area-inset-left, 0px));
+  bottom: max(clamp(1rem, 3vw, 1.75rem), env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: var(--shadow-float);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.35s, transform 0.45s var(--ease-out), visibility 0.35s;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.to-top svg {
+  grid-area: 1 / 1;
+}
+
+.to-top-ring {
+  width: 58px;
+  height: 58px;
+  transform: rotate(-90deg);
+}
+
+.to-top-ring circle {
+  fill: none;
+  stroke-width: 4;
+}
+
+.to-top-ring .track {
+  stroke: var(--line);
+}
+
+.to-top-ring .bar {
+  stroke: var(--red);
+  stroke-linecap: round;
+  stroke-dasharray: 157.08;
+  stroke-dashoffset: calc(157.08 * (1 - var(--progress, 0)));
+}
+
+.to-top-lemon {
+  width: 32px;
+  height: 32px;
+  transform: rotate(calc(var(--progress, 0) * 720deg));
+  transition: opacity 0.25s, transform 0.1s linear;
+}
+
+.to-top i {
+  grid-area: 1 / 1;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s, transform 0.3s var(--ease-out);
+}
+
+.to-top:hover .to-top-lemon,
+.to-top:focus-visible .to-top-lemon {
+  opacity: 0;
+}
+
+.to-top:hover i,
+.to-top:focus-visible i {
+  opacity: 1;
+  transform: none;
+}
+
+.is-locked .to-top {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .to-top {
+    width: 50px;
+    height: 50px;
+  }
+
+  .to-top-ring {
+    width: 50px;
+    height: 50px;
+  }
+
+  .to-top-lemon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Marca grande en el pie: letras con un brillo rojo y limón que avanza. */
+.footer-mark {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 1rem + 11vw, 11rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.footer-mark span {
+  display: inline-block;
+  padding-bottom: 0.08em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg,
+      rgba(227, 27, 35, 0.55) 0%,
+      rgba(255, 198, 26, 0.85) 25%,
+      rgba(227, 27, 35, 0.55) 50%,
+      rgba(255, 198, 26, 0.85) 75%,
+      rgba(227, 27, 35, 0.55) 100%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: mark-shine 10s linear infinite;
+}
+
+@keyframes mark-shine {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* Sin soporte de texto recortado: letras sólidas suaves. */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .footer-mark span {
+    color: rgba(255, 255, 255, 0.12);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.12);
+  }
+}

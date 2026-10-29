@@ -1,0 +1,10 @@
+/* Orden de capas: tokens → base → componentes → secciones → eventos */
+@import './textures.css';
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './sections.css';
+@import './events.css';
+@import './ambient.css';
+@import './presentation.css';
+@import './sales.css';

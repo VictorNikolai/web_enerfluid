@@ -1,0 +1,148 @@
+{
+  "_nota": "Plano de distribución (Lucumo Huaycán, Ate · propuesta 1, julio 2026). 184 puestos de 5 m². Para marcar puestos, agrega su código a 'separados' o 'vendidos', por ejemplo \"C-07\".",
+  "separados": [],
+  "vendidos": [],
+  "outline": "108,95 870,95 870,410 948,410 948,730 270,730 270,410 108,410",
+  "pasaje": {
+    "x": 507,
+    "y": 95,
+    "w": 84,
+    "h": 635
+  },
+  "pabellones": [
+    {
+      "id": "A",
+      "x": 110,
+      "y": 95,
+      "cols": 1,
+      "rows": 8,
+      "rowH": 32.5,
+      "label": [
+        130,
+        438
+      ]
+    },
+    {
+      "id": "B",
+      "x": 190,
+      "y": 123,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 32.5
+    },
+    {
+      "id": "C",
+      "x": 308,
+      "y": 123,
+      "cols": 2,
+      "rows": 9,
+      "rowH": 32.5
+    },
+    {
+      "id": "D",
+      "x": 425,
+      "y": 123,
+      "cols": 2,
+      "rows": 9,
+      "rowH": 32.5
+    },
+    {
+      "id": "E",
+      "x": 593,
+      "y": 123,
+      "cols": 2,
+      "rows": 9,
+      "rowH": 32.5
+    },
+    {
+      "id": "F",
+      "x": 710,
+      "y": 123,
+      "cols": 2,
+      "rows": 9,
+      "rowH": 32.5
+    },
+    {
+      "id": "G",
+      "x": 830,
+      "y": 95,
+      "cols": 1,
+      "rows": 8,
+      "rowH": 32.5,
+      "label": [
+        850,
+        438
+      ]
+    },
+    {
+      "id": "H",
+      "x": 310,
+      "y": 493,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 29
+    },
+    {
+      "id": "I",
+      "x": 428,
+      "y": 493,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 29
+    },
+    {
+      "id": "J",
+      "x": 593,
+      "y": 493,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 29
+    },
+    {
+      "id": "K",
+      "x": 712,
+      "y": 493,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 29
+    },
+    {
+      "id": "L",
+      "x": 830,
+      "y": 493,
+      "cols": 2,
+      "rows": 8,
+      "rowH": 29
+    }
+  ],
+  "banos": [
+    {
+      "x": 110,
+      "y": 355,
+      "w": 40,
+      "h": 24,
+      "label": "SS.HH. H"
+    },
+    {
+      "x": 110,
+      "y": 381,
+      "w": 40,
+      "h": 24,
+      "label": "SS.HH. M"
+    },
+    {
+      "x": 830,
+      "y": 355,
+      "w": 40,
+      "h": 24,
+      "label": "SS.HH. H"
+    },
+    {
+      "x": 830,
+      "y": 381,
+      "w": 40,
+      "h": 24,
+      "label": "SS.HH. M"
+    }
+  ]
+}

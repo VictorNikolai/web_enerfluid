@@ -1,0 +1,49 @@
+[
+  {
+    "slug": "presentacion-huaycan",
+    "title": "La modernidad llegó a Huaycán",
+    "name": "Presentación del Mercado San Martín",
+    "place": "Huaycán, Ate",
+    "date": null,
+    "summary": "Reunimos a los futuros comerciantes del mercado para presentarles el proyecto, conocer al equipo que los acompañará y separar su puesto.",
+    "project": "mercado-ate",
+    "photos": [
+      {
+        "src": "/img/eventos/presentacion-huaycan/equipo",
+        "caption": "El equipo del Mercado San Martín",
+        "ratio": 1.361,
+        "focus": "50% 35%"
+      },
+      {
+        "src": "/img/eventos/presentacion-huaycan/bienvenida",
+        "caption": "Bienvenida a los futuros comerciantes",
+        "ratio": 1.778,
+        "focus": "62% 50%"
+      },
+      {
+        "src": "/img/eventos/presentacion-huaycan/presentacion-equipo",
+        "caption": "Presentación del equipo de atención",
+        "ratio": 1.689,
+        "focus": "55% 45%"
+      },
+      {
+        "src": "/img/eventos/presentacion-huaycan/asistentes",
+        "caption": "Comerciantes y familias de Huaycán",
+        "ratio": 1.778,
+        "focus": "50% 60%"
+      },
+      {
+        "src": "/img/eventos/presentacion-huaycan/palabras",
+        "caption": "Palabras de los asistentes",
+        "ratio": 1.458,
+        "focus": "45% 40%"
+      },
+      {
+        "src": "/img/eventos/presentacion-huaycan/cierre",
+        "caption": "Cierre de la presentación",
+        "ratio": 1.827,
+        "focus": "62% 45%"
+      }
+    ]
+  }
+]

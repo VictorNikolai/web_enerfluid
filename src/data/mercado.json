@@ -1,0 +1,344 @@
+{
+  "story": [
+    {
+      "title": "El terreno",
+      "caption": "Así empezó todo: un terreno vacío en Huaycán.",
+      "src": "/img/mercado/obra-terreno"
+    },
+    {
+      "title": "La obra",
+      "caption": "Maquinaria y cuadrillas levantando las bases del mercado.",
+      "src": "/img/mercado/obra-construccion"
+    },
+    {
+      "title": "La estructura",
+      "caption": "Techos, columnas y las primeras cortinas de los puestos.",
+      "src": "/img/mercado/obra-estructura"
+    },
+    {
+      "title": "Hoy",
+      "caption": "Un mercado moderno, listo para recibir a los comerciantes.",
+      "src": "/img/mercado/aereo-patio"
+    }
+  ],
+  "why": [
+    {
+      "title": "Doble espacio con el almacén",
+      "text": "Abajo atiendes y arriba guardas. Cada puesto de 5 m² trae un almacén de 2.50 m de altura con malla de seguridad y escalera tipo gato.",
+      "tags": [
+        "Almacén de 2.50 m",
+        "Escalera tipo gato",
+        "Malla de seguridad"
+      ],
+      "src": "/img/mercado/puesto-altillo",
+      "focus": "50% 40%",
+      "icon": "ri-archive-line"
+    },
+    {
+      "title": "Luz propia desde el primer día",
+      "text": "Tablero eléctrico con llaves termomagnéticas, tomacorrientes e interruptores. Conecta tu congeladora, licuadora o vitrina sin hacer obras.",
+      "tags": [
+        "Tablero propio",
+        "Llaves termomagnéticas",
+        "Tomacorrientes"
+      ],
+      "src": "/img/mercado/puesto-electrico",
+      "focus": "50% 50%",
+      "icon": "ri-flashlight-line"
+    },
+    {
+      "title": "Pasillos que invitan a comprar",
+      "text": "Pasillos amplios, techos en arco que dejan entrar la luz y piso de cerámica fácil de limpiar. Tus clientes recorren cómodos.",
+      "tags": [
+        "Pasillos amplios",
+        "Buena iluminación",
+        "Cerámica"
+      ],
+      "src": "/img/mercado/pasillo-escalera",
+      "focus": "45% 55%",
+      "icon": "ri-store-3-line"
+    },
+    {
+      "title": "Tus clientes llegan y vuelven",
+      "text": "Estacionamiento frente a la fachada, servicios higiénicos modernos y sistemas contra incendios en todo el mercado.",
+      "tags": [
+        "Estacionamiento",
+        "Baños modernos",
+        "Seguridad"
+      ],
+      "src": "/img/mercado/fachada-estacionamiento",
+      "focus": "50% 45%",
+      "icon": "ri-parking-box-line"
+    }
+  ],
+  "tour": [
+    {
+      "title": "Llegas",
+      "caption": "Así se ve el mercado desde el aire, con los cerros de Ate al fondo.",
+      "src": "/img/mercado/aereo-cerros",
+      "focus": "50% 60%"
+    },
+    {
+      "title": "Estacionas",
+      "caption": "Estacionamiento frente a la fachada para clientes y proveedores.",
+      "src": "/img/mercado/fachada-estacionamiento",
+      "focus": "50% 45%"
+    },
+    {
+      "title": "Entras",
+      "caption": "Pasillos amplios, piso de cerámica y puestos numerados con cortina metálica.",
+      "src": "/img/mercado/pasillo-central",
+      "focus": "50% 50%"
+    },
+    {
+      "title": "Recorres",
+      "caption": "Techos en arco con buena iluminación y escaleras de acceso.",
+      "src": "/img/mercado/pasillo-escalera",
+      "focus": "45% 55%"
+    },
+    {
+      "title": "Servicios",
+      "caption": "Servicios higiénicos amplios, con acabados modernos y fáciles de limpiar.",
+      "src": "/img/mercado/banos",
+      "focus": "50% 55%"
+    }
+  ],
+  "stall": {
+    "src": "/img/mercado/puesto-interior",
+    "alt": "Interior de un puesto con cortina metálica, altillo con malla y escalera",
+    "features": [
+      {
+        "title": "Puerta enrollable",
+        "text": "Altura comercial de 3.50 m hasta la puerta. Abre y cierra tu puesto con seguridad.",
+        "x": 5,
+        "y": 42
+      },
+      {
+        "title": "Almacén con malla de seguridad",
+        "text": "Un segundo nivel de 2.50 m de altura para guardar mercadería sin quitarle espacio a tu zona de venta.",
+        "x": 32,
+        "y": 28,
+        "detail": "/img/mercado/puesto-altillo"
+      },
+      {
+        "title": "Escalera tipo gato",
+        "text": "Subes a tu almacén desde el mismo puesto, de forma rápida y segura.",
+        "x": 74,
+        "y": 48
+      },
+      {
+        "title": "Instalación eléctrica propia",
+        "text": "Tablero con llaves termomagnéticas, tomacorrientes e interruptores listos para usar.",
+        "x": 13,
+        "y": 57,
+        "detail": "/img/mercado/puesto-electrico"
+      },
+      {
+        "title": "Paredes y piso de cerámica",
+        "text": "Superficies fáciles de limpiar, ideales para alimentos y productos frescos.",
+        "x": 46,
+        "y": 76
+      }
+    ]
+  },
+  "rubros": [
+    {
+      "name": "Abarrotes",
+      "icon": "ri-shopping-basket-2-line"
+    },
+    {
+      "name": "Carnes y pollo",
+      "icon": "ri-knife-line"
+    },
+    {
+      "name": "Frutas y verduras",
+      "icon": "ri-leaf-line"
+    },
+    {
+      "name": "Comidas y jugos",
+      "icon": "ri-cup-line"
+    },
+    {
+      "name": "Panadería",
+      "icon": "ri-cake-3-line"
+    },
+    {
+      "name": "Ropa y calzado",
+      "icon": "ri-t-shirt-2-line"
+    },
+    {
+      "name": "Bazar y regalos",
+      "icon": "ri-gift-2-line"
+    },
+    {
+      "name": "Celulares y accesorios",
+      "icon": "ri-smartphone-line"
+    },
+    {
+      "name": "Botica",
+      "icon": "ri-capsule-line"
+    },
+    {
+      "name": "Servicios",
+      "icon": "ri-scissors-2-line"
+    },
+    {
+      "name": "Otro rubro"
+    }
+  ],
+  "timing": [
+    {
+      "value": "Quiero empezar lo antes posible.",
+      "label": "Lo antes posible"
+    },
+    {
+      "value": "Quiero empezar en los próximos meses.",
+      "label": "En unos meses"
+    },
+    {
+      "value": "Por ahora solo quiero información.",
+      "label": "Solo información"
+    }
+  ],
+  "invest": {
+    "center": {
+      "title": "Entrega de obra en tiempo récord",
+      "value": "3 meses",
+      "icon": "ri-hammer-line"
+    },
+    "items": [
+      {
+        "title": "Zona de alto movimiento",
+        "text": "Sobre la Av. Andrés Avelino Cáceres, frente al Mercado La Arenera.",
+        "icon": "ri-group-line"
+      },
+      {
+        "title": "Zona comercial",
+        "text": "Rodeado de comercios, colegios y viviendas.",
+        "icon": "ri-store-2-line"
+      },
+      {
+        "title": "Excelente conectividad",
+        "text": "Paraderos en la avenida y salida directa hacia Lima y Ate.",
+        "icon": "ri-bus-line"
+      },
+      {
+        "title": "Una inversión con futuro",
+        "text": "Tu propio local en un mercado nuevo y ordenado.",
+        "icon": "ri-line-chart-line"
+      },
+      {
+        "title": "Título independizado",
+        "text": "Cada puesto cuenta con su propio título.",
+        "icon": "ri-file-text-line"
+      },
+      {
+        "title": "Venta de local más aires",
+        "text": "Compras el local y también sus aires.",
+        "icon": "ri-building-line"
+      }
+    ]
+  },
+  "specs": [
+    {
+      "label": "Área del puesto",
+      "value": "5 m²",
+      "icon": "ri-layout-grid-line"
+    },
+    {
+      "label": "Medida referencial",
+      "value": "2.50 × 2.00 m",
+      "icon": "ri-ruler-2-line"
+    },
+    {
+      "label": "Altura comercial",
+      "value": "3.50 m",
+      "note": "hasta la puerta enrollable",
+      "icon": "ri-arrow-up-down-line"
+    },
+    {
+      "label": "Almacén",
+      "value": "2.50 m",
+      "note": "de altura",
+      "icon": "ri-archive-line"
+    },
+    {
+      "label": "Estructura",
+      "value": "Metálica",
+      "icon": "ri-building-4-line"
+    },
+    {
+      "label": "Acceso al almacén",
+      "value": "Escalera tipo gato",
+      "icon": "ri-stack-line"
+    },
+    {
+      "label": "Puertas",
+      "value": "Elevadizas eléctricas",
+      "note": "acceso desde la calle",
+      "icon": "ri-door-line"
+    }
+  ],
+  "renders": [
+    {
+      "src": "/img/mercado/render-abarrotes",
+      "alt": "Ejemplo de puesto de abarrotes con estantes llenos",
+      "caption": "Abarrotes"
+    },
+    {
+      "src": "/img/mercado/render-carniceria",
+      "alt": "Ejemplo de puesto de carnicería con vitrina refrigerada",
+      "caption": "Carnicería"
+    }
+  ],
+  "brochure": {
+    "file": "/brochure/mercado-san-martin-brochure.pdf",
+    "size": "2.9 MB",
+    "pages": [
+      {
+        "src": "/img/brochure/pagina-01",
+        "caption": "Portada: nuevo mercado moderno en Huaycán"
+      },
+      {
+        "src": "/img/brochure/pagina-02",
+        "caption": "El mercado de los emprendedores"
+      },
+      {
+        "src": "/img/brochure/pagina-03",
+        "caption": "Infraestructura que acompaña tu negocio"
+      },
+      {
+        "src": "/img/brochure/pagina-04",
+        "caption": "Pasadizos amplios y puestos organizados"
+      },
+      {
+        "src": "/img/brochure/pagina-05",
+        "caption": "Seguridad e infraestructura"
+      },
+      {
+        "src": "/img/brochure/pagina-06",
+        "caption": "Puestos comerciales: medidas y características"
+      },
+      {
+        "src": "/img/brochure/pagina-07",
+        "caption": "¿Por qué invertir?"
+      },
+      {
+        "src": "/img/brochure/pagina-08",
+        "caption": "Plano de distribución: 184 puestos"
+      },
+      {
+        "src": "/img/brochure/pagina-09",
+        "caption": "Ubicación estratégica"
+      },
+      {
+        "src": "/img/brochure/pagina-10",
+        "caption": "Cuentas para depósitos"
+      },
+      {
+        "src": "/img/brochure/pagina-11",
+        "caption": "Mercado San Martín 2026"
+      }
+    ]
+  }
+}

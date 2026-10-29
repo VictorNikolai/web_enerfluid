@@ -1,0 +1,79 @@
+{
+  "_nota": "Datos del negocio. Los usan la web, Google (datos estructurados), las redes al compartir y la app instalable. Reemplaza lo marcado como PENDIENTE.",
+  "name": "Mercado San Martín",
+  "shortName": "San Martín",
+  "tagline": "La modernidad llegó a Huaycán",
+  "description": "Mercado San Martín en Huaycán, Ate: 184 puestos comerciales de 5 m² con almacén, título independizado y seguridad contra incendios. Frente al Mercado La Arenera. Invierte en tu local comercial.",
+  "url": "https://www.mercadosanmartin.pe",
+  "phone": "+51 999 999 999",
+  "whatsapp": "51999999999",
+  "email": "ventas@mercadosanmartin.pe",
+  "address": {
+    "street": "Av. Andrés Avelino Cáceres 130, Mz. A L1: 10",
+    "district": "Cooperativa El Lúcum de Huaycán",
+    "city": "Ate",
+    "region": "Lima",
+    "postalCode": "15483",
+    "country": "PE",
+    "display": "Av. Andrés Avelino Cáceres 130, Huaycán, Ate",
+    "reference": "Frente al Mercado La Arenera"
+  },
+  "geo": {
+    "_nota": "Coordenadas aproximadas sobre la Av. Andrés Avelino Cáceres. Reemplázalas por las exactas del mercado (en Google Maps: clic derecho sobre el mercado y copia los números).",
+    "lat": -12.0167,
+    "lng": -76.8167
+  },
+  "hours": {
+    "display": "Lunes a sábado de 8:00 a 18:00",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "socials": [
+    {
+      "name": "Facebook",
+      "icon": "ri-facebook-fill",
+      "url": "",
+      "search": "https://www.facebook.com/search/top?q=Mercado%20San%20Mart%C3%ADn%20Huayc%C3%A1n"
+    },
+    {
+      "name": "Instagram",
+      "icon": "ri-instagram-line",
+      "url": "",
+      "search": "https://www.instagram.com/explore/search/keyword/?q=mercadosanmartinhuaycan"
+    },
+    {
+      "name": "TikTok",
+      "icon": "ri-tiktok-fill",
+      "url": "",
+      "search": "https://www.tiktok.com/search?q=Mercado%20San%20Mart%C3%ADn%20Huayc%C3%A1n"
+    },
+    {
+      "name": "YouTube",
+      "icon": "ri-youtube-fill",
+      "url": "",
+      "search": "https://www.youtube.com/results?search_query=Mercado+San+Mart%C3%ADn+Huayc%C3%A1n"
+    }
+  ],
+  "colors": {
+    "brand": "#E31B23",
+    "dark": "#3D0A0E"
+  },
+  "_notaRedes": "En socials, pon en 'url' el enlace real de cada red (ej. https://www.facebook.com/mercadosanmartin). Mientras esté vacío, el ícono lleva a una búsqueda del mercado en esa red.",
+  "facts": {
+    "stalls": 184,
+    "stallArea": "5 m²",
+    "stallSize": "2.50 m × 2.00 m",
+    "height": "3.50 m",
+    "storageHeight": "2.50 m",
+    "pavilions": 12,
+    "delivery": "3 meses"
+  }
+}
